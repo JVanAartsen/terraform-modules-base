@@ -1,3 +1,13 @@
+# On push, test.tf is found across the repo and we run a terraform plan of each
+# 
+# When PR is opened, changed files are found across the repo and we create a list of "module changes"
+# The changes modules go into an interface in the Github UI that allows the user to select "breaking" "feature" or "patch"
+# The responsible merger can then approve and merge if the checks pass
+# On 
+
+
+
+
 name: Github Actions test
 on: [push]
 jobs: 
@@ -5,3 +15,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "hello"
+      - run: ls -R *.test.tf > testlist
+  
