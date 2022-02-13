@@ -17,5 +17,5 @@ jobs:
       - run: echo "hello"
       - name: Find test files
         id: testlist
-        run: find . -type f -name "*.test.tf"
+        run: find . -type f -name '*.test.tf'
   
