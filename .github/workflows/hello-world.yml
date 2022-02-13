@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "hello"
+      - run: ls -R .
       - name: Find test files
         id: testlist
         run: find . -type f -name '*.test.tf'
